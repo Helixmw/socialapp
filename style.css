@@ -54,7 +54,7 @@ body{
     height:2.4rem;
     width:2.4rem;
     border-radius:100px;
-    background-color:rgb(220, 167, 255);
+    background-color:#dca7ff;
     position:absolute;
     right:46%;
     
@@ -90,8 +90,54 @@ body{
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    display:block;
     
     
+}
+
+.tagbtn{
+    background-color: #bc5af0;
+    text-align: center;
+    width:5rem;
+    border-radius: 100px;
+    cursor: pointer;
+    padding:0.2rem;
+}
+
+.textbox{
+    margin-top: 0.4rem;
+    width:98%;
+    border:1px solid #dca7ff;
+    height:10rem;
+    font-size: 1rem;
+}
+.container-3{
+    margin:auto;
+    display:none;
+    background-color:white;
+    width:80%;
+    border-radius:5px;
+    padding:0.6rem;
+    
+}
+
+
+.tagname{
+    color:black;
+    font-weight: bold;
+    margin-left: 0.4rem;
+}
+
+.tagimg{
+    height:3rem;
+    border-radius:100px;
+    border:2px #dca7ff solid;
+}
+
+.tagid{
+    display: flex;
+    align-items: center;
+   
 }
 
 .mainimg, .fullname, .email, .bttn{

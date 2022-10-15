@@ -1,4 +1,3 @@
-
 let container = document.querySelector('.container-1');
 let xhr = new XMLHttpRequest();
 xhr.open('GET','https://reqres.in/api/users');
@@ -17,7 +16,18 @@ xhr.onload = () => {
                 document.querySelector('.fullname').innerHTML = details.data.first_name + " " + details.data.last_name;
                 document.querySelector('.email').innerHTML = details.data.email;
                 document.querySelector('.bttn').addEventListener("click", () => {
-                document.querySelector('.modal').classList.remove('visible');
+                    document.querySelector('.modal').classList.remove('visible');
+                });
+                document.querySelector('.msg').addEventListener("click", () => {
+                    document.querySelector('.container-2').classList.add('invisible');
+                    document.querySelector('.container-3').classList.add('visible');
+                    document.querySelector('.tagimg').src = details.data.avatar;
+                    document.querySelector('.tagname').innerHTML = "Message " + details.data.first_name
+                });
+                document.querySelector('.tagbtn').addEventListener("click", () => {
+                    document.querySelector('.container-3').classList.remove('visible');
+                    document.querySelector('.container-2').classList.remove('invisible');
+                    document.querySelector('.modal').classList.remove('visible');
                 });
             }
             xhr.send();
