@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .heading{
+            text-align: center;
+            margin-top:1.5rem;
+            font-size:2rem;
+        }
+    
+        .box{
+            margin:0.5rem;
+            display:flex;
+            background-color: white;
+            color:black;
+            border-radius:100px;
+            width:15em;
+        }
+
+        .inactive{
+            color:red;
+        }
+
+        .status{
+            color:rgb(115, 30, 194);
+            font-size:0.9rem;
+        }
+        .name{
+            font-weight: bold;
+        }
+
+        .info{
+            padding-left:0.5rem;
+            margin-top:0.4rem;
+        }
+    
+        .profimg{
+            border:4px solid rgb(220, 167, 255);
+            height:5rem;
+            width:5rem;
+            border-radius:100px;
+        }
+        .mainimg{
+            border:4px solid rgb(220, 167, 255);
+            height:8rem;
+            width:8rem;
+            border-radius:100px;
+            
+        }
+
+        .container-1{
+            display:flex;
+            flex-wrap: wrap;
+            margin-left:15em;
+            margin-right: 15em;
+        }
+        .container-2{
+            
+            display:flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            
+            
+        }
+
+        .mainimg, .fullname, .email, .bttn{
+            margin-bottom:0.4rem;
+        }
+
+        .bttn{
+            cursor:pointer;
+            background-color: rgb(255, 255, 255);
+            color:black;
+            border-radius:100px;
+            padding-top:0.5rem;
+            font-weight: bold;
+            padding-bottom:0.5rem;
+        }
+
+        .email{
+            color:rgb(221, 221, 223);
+            margin-bottom:0.8rem;
+        }
+        .fullname{
+            font-size:2rem;
+        }
+
+        .modal{
+            display: flex;
+            justify-content: center;
+            padding-top:9em;
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            background-color: rgba(0,0,0,0.4);
+            backdrop-filter: blur(6px);
+            display:none;
+        }
+
+        .visible{
+            display:block;
+        }
+
+        .invisible{
+            display:none;
+        }
+    
+        @media  screen and (max-width: 768px){
+            .bttn{
+                margin-left:3rem;
+                margin-right:3rem;
+            }
+            .container-1{
+            margin-top:2rem;
+            margin-left:0em;
+            margin-right: 0em;
+            display:flex;
+            justify-content: center;
+            
+            }
+    
+            .profimg{
+                height:4.5rem;
+                width:4.5rem;
+            }
+
+            .box{
+                width:10rem;
+            }
+
+            .profimg{
+            border:2px solid rgb(220, 167, 255);
+            height:3rem;
+            width:3rem;
+            border-radius:100px;
+
+        }
+
+        .info{
+            margin-top:0.2rem;
+            padding-left:0.2rem;
+        }
+        .name{
+            font-size:0.9em;
+            
+        }
+
+        }
+    </style>
+    <div class="heading">Profile Viewer</div>
+    <div class="container-1">
+    </div>
+    <div class="modal">
+        <div class="container-2">
+            <div><img class="mainimg"/></div>
+            <div class="fullname">Test</div>
+            <div class="email">Test</div>
+          
+            <div class="bttn">Add Friend</div>
+        </div>
+    </div>
+
+   
+        
+</body>
+<script src="main.js"></script>
+
+</html>
