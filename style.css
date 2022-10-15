@@ -10,6 +10,8 @@ body{
     font-family: OpenSans;
 }
 
+
+
 .heading{
     text-align: center;
     margin-top:1.5rem;
@@ -17,18 +19,24 @@ body{
 }
 
 .box{
-    margin:0.5rem;
+    margin:0.2rem;
     display:flex;
     background-color: white;
     color:black;
     border-radius:100px;
-    width:15em;
+    width:30%;
+    cursor: pointer;
 }
 
 .inactive{
     color:red;
 }
-
+.btns{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    
+}
 .status{
     color:rgb(115, 30, 194);
     font-size:0.9rem;
@@ -42,10 +50,25 @@ body{
     margin-top:0.4rem;
 }
 
+.circle-btn{
+    height:2.4rem;
+    width:2.4rem;
+    border-radius:100px;
+    background-color:rgb(220, 167, 255);
+    position:absolute;
+    right:46%;
+    
+}
+
+.msg{
+    background-color:rgb(220, 167, 255);
+    color:white
+}
+
 .profimg{
     border:4px solid rgb(220, 167, 255);
-    height:5rem;
-    width:5rem;
+    height:4rem;
+    width:4rem;
     border-radius:100px;
 }
 .mainimg{
@@ -59,8 +82,7 @@ body{
 .container-1{
     display:flex;
     flex-wrap: wrap;
-    margin-left:15em;
-    margin-right: 15em;
+    
 }
 .container-2{
     
@@ -84,8 +106,9 @@ body{
     padding-top:0.5rem;
     font-weight: bold;
     padding-bottom:0.5rem;
-    margin-left:40%;
-    margin-right:40%;
+    margin-left:1%;
+    width:40%;
+    margin-right:1%;
 }
 
 .email{
@@ -120,21 +143,33 @@ body{
 
 @media  screen and (max-width: 768px){
 
+    .fullname{
+        font-size:2rem;
+    }
+
     .heading{
         
         font-size:1.3rem;
     }
+
+    .circle-btn{
+        
+        right:41%;
+        
+    }
+    
     
 
     .bttn{
-        margin-left:3rem;
-        margin-right:3rem;
+        /* margin-left:3rem;
+        margin-right:3rem; */
     }
     .container-1{
     margin-top:2rem;
     margin-left:0em;
     margin-right: 0em;
     display:flex;
+    flex-direction: row;
     justify-content: center;
     
     }
@@ -145,7 +180,7 @@ body{
     }
 
     .box{
-        width:10rem;
+        width:95%;
     }
 
     .profimg{
