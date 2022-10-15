@@ -1,5 +1,4 @@
 
-
 let container = document.querySelector('.container-1');
 let xhr = new XMLHttpRequest();
 xhr.open('GET','https://reqres.in/api/users');
@@ -48,7 +47,3 @@ xhr.onload = () => {
         }
 }
 xhr.send();
-
-function viewUser(id){
-   
-}
