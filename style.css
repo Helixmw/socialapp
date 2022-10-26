@@ -5,10 +5,22 @@
 
 body{
     font-family: OpenSans;
+    margin:0;
 }
 
+.nav{
+    background-color: rgb(34, 229, 255);
+    height:3.5rem;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    
+}
 .container-1{
     display:flex;
+    margin:0.3rem;
+    padding-top:4rem;
 }
 .middle{
     flex:1;
@@ -40,7 +52,7 @@ body{
 }
 
 .inactive{
-    color:rgb(238, 239, 240)
+    color:rgb(173, 173, 173)
 }
 .testimg{
     border:3px solid rgb(34, 229, 255);
@@ -65,7 +77,7 @@ body{
     font-size:0.8rem;
     text-align: center;
     border-radius: 100px;
-    padding:0.2rem;
+    padding:0.3rem;
     width:4rem;
 }
 .remove{
@@ -138,5 +150,42 @@ body{
 @media screen and (max-width: 768px){
 .sides{
     display: none;
+}
+
+.name{
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.remove, .follow{
+    cursor: pointer;
+    font-size:0.9rem;
+    text-align: center;
+    border-radius: 100px;
+    padding:0.3rem;
+    width:4rem;
+}
+
+.testimg{
+    border:3px solid rgb(34, 229, 255);
+    background-color: rgb(250, 252, 252);
+    height: 3.5rem;
+    width:3.5rem;
+    border-radius: 100px;
+}
+
+.mod{
+    height:6rem;
+    width:6rem;
+}
+
+.active{
+    color:rgb(34, 229, 255);
+    font-size:0.9rem;
+}
+
+.dev{
+    position: fixed;
+    bottom:0;
 }
 }

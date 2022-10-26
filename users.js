@@ -1,6 +1,6 @@
 export class Users{
     
-    constructor(middle){
+    constructor(middle,modal,yes,no){
         let xhr = new XMLHttpRequest();
         xhr.open('GET','https://reqres.in/api/users');
         xhr.onload = () => {
@@ -12,14 +12,15 @@ export class Users{
                     lname: pple[i].last_name,
                     email: pple[i].email,
                     image: pple[i].avatar,
+                    follow:0
                 };
-                this.createList(middle,data);
+                this.createList(middle,data,modal,yes,no);
             }  
         }
         xhr.send();
     }
 
-    createList(middle,data){
+    createList(middle,data,modal,yes,no){
         let user = document.createElement("div");
         let img = document.createElement("div");
         let testimg = document.createElement("img");
@@ -63,17 +64,31 @@ export class Users{
         user.appendChild(img);
         user.appendChild(tagname);
         middle.appendChild(user);
+        follow.addEventListener('click',() => {
+           data.follow = this.follows(modal,data.fname,data.lname,data.email,data.image,data.follow,follow,yes,no);
+        });
+    }
+    follows(modal,fn,ln,email,image,fol_stat,follow,yes,no){
+        if(fol_stat == 0){
+            fol_stat = 1;
+            follow.innerHTML="Following";
+            modal.classList.add('inv');
+        }else if(fol_stat == 1){
+            modal.classList.remove('inv');
+            let img = document.querySelector('.mod');
+            img.src = image;
+            let ques = document.querySelector('.ques');
+            ques.innerHTML = "Do you want to unfollow " + fn + "?";
+            yes.addEventListener('click', () => {
+                fol_stat = 0;
+                follow.innerHTML="Follow";
+                modal.classList.add('inv');
+            });
+            no.addEventListener('click', () => {
+                modal.classList.add('inv');
+            });
+        }
+        return fol_stat;    
     }
 
-    unfollow(modal){
-        modal.classList.remove('inv');
-    }
-
-    clickNo(modal){
-        modal.classList.add('inv');
-    }
-
-    clickYes(modal){
-        modal.classList.add('inv');
-    }
 }
