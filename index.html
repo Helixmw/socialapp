@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"> 
     <link rel="icon" type="image/png" href="">
+    <link rel="stylesheet" href="./assets/croppie.css"/>
     <title>Social App</title>
 </head>
+<style>
+    
+</style>
 <body>
-    <div class="nav"></div>
+    <div class="nav">
+        <div class="box_ sides_"></div>
+        <div class="box_ middle_"><div class="add-button">Add Yourself</div></div>
+        <div class="box_ sides_"></div>
+    </div>
    <div class="container-1">
     <div class="box sides">
     </div>
@@ -31,8 +39,27 @@
             <div class="no">No</div>
         </div>
     </div>
+    <div class="upload">
+        <div class="crop-field">
+            <div class="cropper">
+            </div>
+            <div class="btns">
+                <div class="btn_ accept">Accept</div>
+                <div class="btn_ cancel" id="cancel">Cancel</div>
+            </div>
+        </div>
+        <div class="prev-img">
+            <!-- <img src="" alt="" class="main-img"> -->
+        </div>
+        <div class="label"></div>
+        <input type="text" class="uname">
+        <div class="bttn"><div class="txt" style="position:absolute;padding-left:8px;">Select Image</div> <input type="file" class="file" accept=".jpg, .jpeg, .png" style="opacity:0;"></div>
+        <div class="adduser">Add New User</div>
+       </div>
    </div>
+  
 </body>
+<script src="./assets/croppie.js"></script>
 <script src="./main.js" type="module"></script>
 
 </html>

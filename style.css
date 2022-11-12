@@ -10,12 +10,151 @@ body{
 
 .nav{
     background-color: rgb(34, 229, 255);
+    justify-content: center;
+    display:flex;
     height:3.5rem;
     position:fixed;
     top:0;
     left:0;
     right:0;
     
+}
+
+.cropper{
+    margin-top: 2rem;
+}
+
+.btns{
+    display:flex;
+    margin-bottom: 2rem;
+
+}
+
+#cancel{
+    color:grey;
+    background: rgb(211, 211, 211);
+}
+
+.btn_{
+    cursor: pointer;
+    margin:0.4rem;
+    font-size:1rem;
+    color:white;
+    background: rgb(34, 229, 255);
+    padding:0.2rem;
+    text-align: center;
+    width:5rem;
+    border-radius: 100px;
+}
+
+.crop-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:30rem;
+    width:20rem;
+    position:absolute;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(4px);
+    border-radius:5px;
+    z-index:1;
+}
+
+.main-img{
+    height:8rem;
+    width:8rem;
+}
+
+.add-border{
+    border:2px solid rgb(34, 229, 255);
+}
+
+.prev-img{
+    margin-bottom:1rem;
+    border-radius:100px;
+    border:2px dashed rgb(34, 229, 255);
+    height:8rem;
+    width:8rem;
+}
+
+.label{
+    margin-bottom:4rem;
+    font-size:1.3rem;
+    font-weight:bold;
+}
+
+.adduser{
+    cursor: pointer;
+    text-align: center;
+    padding:0.5rem;
+    border-radius: 100px;
+    background: rgb(34, 229, 255);
+    color:white;
+}
+
+.bttn{
+    margin-bottom:4rem;
+    border-radius:100px;
+    color:white;
+    text-align: center;
+    width:7.2rem;
+    padding:0.4rem;
+    background: rgb(34, 229, 255);
+}
+
+
+.uname{
+    padding-left:0.5rem;
+    border-radius:100px;
+    width:90%;
+    margin-bottom:0.5rem;
+    height:1.8rem;
+    border:1px solid rgb(34, 229, 255);
+}
+
+.name{
+    border-radius:100px;
+    width:90%;
+    margin-bottom:0.5rem;
+    height:1.8rem;
+    border:1px solid rgb(34, 229, 255);
+}
+
+.upload{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    height:30rem;
+    width:20rem;
+    border-radius:6px;
+    padding:0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+
+
+
+.add-button{
+    color:white;
+    border:2px solid white;
+    text-align: center;
+    padding:0.4rem;
+    border-radius:100px;
+    cursor:pointer;
+    width:8rem;
+}
+.middle_{
+    margin-right:0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.box_{
+    flex:1;
 }
 .container-1{
     display:flex;
@@ -147,12 +286,26 @@ body{
     width:50%;
 }
 
+/* .upload{
+    
+    
+} */
 @media screen and (max-width: 768px){
 .sides{
     display: none;
 }
 
-.name{
+.sides_{
+    display: none;
+}
+
+.add-button{
+    padding:0.4rem;
+    font-size:0.9rem;
+
+}
+
+.listname{
     font-size: 0.9rem;
     font-weight: bold;
 }
