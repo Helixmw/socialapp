@@ -21,6 +21,7 @@ export class Users{
     }
 
     addNewUser(img,thename,middle,modal,field){
+        
         let user = document.createElement("div");
         let imge = document.createElement("div");
         let testimg = document.createElement("img");
@@ -60,6 +61,9 @@ export class Users{
         middle.insertBefore(user,middle.firstChild);
         modal.classList.add('inv');
         modal.classList.add('inv');
+        follow.addEventListener('click',() => {
+            data.follow = this.follows(modal,thename,'',thename + '@email.com',img,0,follow,yes,no);
+         });
 
     }
 

@@ -1,5 +1,5 @@
 // let modal = document.querySelector('.modal');
-import {Users} from '/users.js';
+import {Users} from './users.js';
 let modal = document.querySelector('.modal');
 let yes = document.querySelector('.yes');
 let no = document.querySelector('.no');
@@ -17,8 +17,8 @@ let profname = document.querySelector('.uname');
 let label = document.querySelector('.label');
 let newimg;
 modal.classList.add('inv');
-// modal.classList.remove('inv'); //
-prompt.classList.add('inv'); //
+// modal.classList.remove('inv');
+prompt.classList.add('inv');
 field.classList.add('inv');
 adduser.classList.add('inv');
 const user = new Users(middle,modal,yes,no,add);
